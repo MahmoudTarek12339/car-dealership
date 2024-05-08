@@ -1,3 +1,5 @@
+import 'package:car_dealership/presentation/car_details_screen/car_details_screen.dart';
+import 'package:car_dealership/presentation/home_screen/home_screen.dart';
 import 'package:car_dealership/presentation/splash_screen/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -12,10 +14,13 @@ class RouteGenerator {
     switch (settings.name) {
       case Routes.splashRoute:
         return MaterialPageRoute(builder: (_) => const SplashScreen());
-      /*case Routes.homeRoute:
-        return MaterialPageRoute(builder: (_) => const SplashView());
+      case Routes.homeRoute:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       case Routes.carDetails:
-        return MaterialPageRoute(builder: (_) => const SplashView());*/
+        Map<String, dynamic> arguments =
+            settings.arguments as Map<String, dynamic>;
+        int index = arguments['index'] as int;
+        return MaterialPageRoute(builder: (_) => CarDetailsScreen(index));
       default:
         return unDefinedRoute();
     }
@@ -31,6 +36,3 @@ class RouteGenerator {
             ));
   }
 }
-/*Map<String, dynamic> arguments =
-            settings.arguments as Map<String, dynamic>;
-        String ingredients = arguments['ingredients'] as String;*/

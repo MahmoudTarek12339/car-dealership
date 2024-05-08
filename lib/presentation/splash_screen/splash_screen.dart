@@ -57,7 +57,10 @@ class SplashScreen extends StatelessWidget {
                       backgroundColor: ColorManager.green),
                   child: Text(
                     'Get Started',
-                    style: TextStyle(color: ColorManager.black),
+                    style: TextStyle(
+                      fontSize: 16,
+                      color: ColorManager.black,
+                    ),
                   ),
                 ),
               ),
