@@ -15,15 +15,11 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
-
           centerTitle: true,
           backgroundColor: ColorManager.white,
-          leading: Icon(
-            Icons.dashboard,
-            color: ColorManager.cyan,
-          ),
           title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisSize: MainAxisSize.min,
             children: [
               Icon(
                 Icons.place_outlined,

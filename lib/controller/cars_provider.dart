@@ -357,8 +357,6 @@ class CarsProvider with ChangeNotifier {
     ),
   ];
 
-  List<String> makers = [];
-  List<String> models = [];
 
   List<Car> result = [];
 
@@ -382,19 +380,6 @@ class CarsProvider with ChangeNotifier {
               element.model.toLowerCase().startsWith(query.toLowerCase()))
           .toList();
     }
-    notifyListeners();
-  }
-
-  initMakers() {
-    makers = cars.map((e) => e.make).toList();
-    notifyListeners();
-  }
-
-  initModels(String make) {
-    models = cars
-        .where((element) => element.make == make)
-        .map((e) => e.model)
-        .toList();
     notifyListeners();
   }
 }
