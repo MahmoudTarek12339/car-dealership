@@ -364,7 +364,8 @@ class CarsProvider with ChangeNotifier {
 
   bool searching = false;
 
-  updateFavorite(int index) {
+  updateFavorite(int id) {
+    int index=cars.indexWhere((element) => element.id==id);
     cars[index].changeFavorite();
     notifyListeners();
   }

@@ -8,7 +8,7 @@ class FavoriteWidget extends StatelessWidget {
   final Car car;
   final int index;
 
-  const FavoriteWidget(this.car,this.index, {super.key});
+  const FavoriteWidget(this.car, this.index, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class FavoriteWidget extends StatelessWidget {
       padding: const EdgeInsets.all(5.0),
       child: IconButton(
         onPressed: () {
-          context.read<CarsProvider>().updateFavorite(index);
+          context.read<CarsProvider>().updateFavorite(car.id);
         },
         icon: Icon(
           car.isFavorite ? Icons.favorite : Icons.favorite_border,

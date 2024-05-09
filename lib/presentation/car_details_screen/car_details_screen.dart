@@ -15,7 +15,11 @@ class CarDetailsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Car car = context.watch<CarsProvider>().cars[index];
+    //to switch if user select car from search or normal list
+    bool searching = context.read<CarsProvider>().searching;
+    final Car car = searching
+        ? context.watch<CarsProvider>().result[index]
+        : context.watch<CarsProvider>().cars[index];
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
@@ -42,7 +46,7 @@ class CarDetailsScreen extends StatelessWidget {
           actions: [
             IconButton(
               onPressed: () {
-                context.read<CarsProvider>().updateFavorite(index);
+                context.read<CarsProvider>().updateFavorite(car.id);
               },
               icon: Icon(
                 car.isFavorite ? Icons.favorite : Icons.favorite_border,

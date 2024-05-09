@@ -15,7 +15,7 @@ class DetailsCarImageWidget extends StatelessWidget {
       height: 200.0,
       child: CachedNetworkImage(
         imageUrl: image,
-        fit: BoxFit.cover,
+        fit: BoxFit.fitWidth,
         progressIndicatorBuilder: (context, url, progress) {
           return Center(
             child: CircularProgressIndicator(

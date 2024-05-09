@@ -15,6 +15,7 @@ class HomeScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           elevation: 0,
+
           centerTitle: true,
           backgroundColor: ColorManager.white,
           leading: Icon(
@@ -50,10 +51,10 @@ class HomeScreen extends StatelessWidget {
             ],
           ),
           actions: const [
+            //user profile picture
             Padding(
               padding: EdgeInsets.only(
                 right: 15.0,
-                top: 10.0,
               ),
               child: CircleAvatar(
                 radius: 16,
@@ -83,7 +84,7 @@ class HomeScreen extends StatelessWidget {
                       height: 5,
                     ),
                     Text(
-                      'let\'s find your dream car hear',
+                      'let\'s find your dream car here',
                       style: TextStyle(fontSize: 18, color: ColorManager.black),
                     ),
                     const SizedBox(
