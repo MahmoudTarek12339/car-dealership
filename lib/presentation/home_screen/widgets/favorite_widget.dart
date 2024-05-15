@@ -19,7 +19,9 @@ class FavoriteWidget extends StatelessWidget {
           context.read<CarsProvider>().updateFavorite(car.id);
         },
         icon: Icon(
-          car.isFavorite ? Icons.favorite : Icons.favorite_border,
+          context.watch<CarsProvider>().isFavorite(car.id)
+              ? Icons.favorite
+              : Icons.favorite_border,
           color: ColorManager.red,
         ),
       ),

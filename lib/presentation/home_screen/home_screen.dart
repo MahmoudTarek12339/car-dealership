@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:car_dealership/controller/cars_provider.dart';
 import 'package:car_dealership/presentation/home_screen/widgets/cars_list_widget.dart';
 import 'package:car_dealership/presentation/home_screen/widgets/search_cars_list_widget.dart';
@@ -54,7 +55,7 @@ class HomeScreen extends StatelessWidget {
               ),
               child: CircleAvatar(
                 radius: 16,
-                backgroundImage: NetworkImage(
+                backgroundImage: CachedNetworkImageProvider(
                     'https://i.pinimg.com/originals/3c/59/da/3c59da5f6aefd35919550e9405dc63c4.jpg'),
               ),
             )
@@ -90,13 +91,16 @@ class HomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: 25,
                     ),
-                    Text(
-                      'Popular Cars',
-                      style: TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          color: ColorManager.black),
-                    ),
+                    //to hide it while loading or if failure happened
+                    if (!context.read<CarsProvider>().isLoading &&
+                        !context.read<CarsProvider>().apiRequestFail)
+                      Text(
+                        'Popular Cars',
+                        style: TextStyle(
+                            fontSize: 28,
+                            fontWeight: FontWeight.bold,
+                            color: ColorManager.black),
+                      ),
                     const SizedBox(
                       height: 10,
                     ),
