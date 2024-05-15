@@ -1,4 +1,5 @@
 import 'package:car_dealership/controller/cars_provider.dart';
+import 'package:car_dealership/presentation/resources/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,7 @@ class NoInternetWidget extends StatelessWidget {
     return SliverToBoxAdapter(
       child: Column(
         children: [
-          Lottie.asset('assets/lottie/noInternet.json'),
+          Lottie.asset(LottieAssets.noInternet),
           const SizedBox(
             height: 15,
           ),
