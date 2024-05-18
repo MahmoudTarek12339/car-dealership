@@ -1,0 +1,25 @@
+{
+  "language": "English",
+  "@language": {
+    "description": "the current Language"
+  },
+  "findYourIdealCar": "Find your ideal Car",
+  "getAccess": "Get access to the best deals from global cars companies",
+  "getStarted": "Get Started",
+  "hello": "Hello Mahmoud",
+  "findDreamCarHere": "let's find your dream car here",
+  "popularCars": "Popular Cars",
+  "oops": "Oops!",
+  "someThingWentWrong": "Something Went Wrong,",
+  "pleaseCheckConnection": "Please Check Your Internet Connection",
+  "tryAgain": "Try Again",
+  "noResultFound": "No Result Found",
+  "searchYourCar": "Search your car",
+  "description": "Description",
+  "engine": "Engine",
+  "transmission" : "Transmission",
+  "fuelType" : "Fuel Type",
+  "totalPrice" : "Total Price",
+  "available": "Available",
+  "bookNow": "Book Now"
+}

@@ -3,6 +3,7 @@ import 'package:car_dealership/presentation/home_screen/widgets/cars_list_item.d
 import 'package:car_dealership/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SearchCarsListWidget extends StatelessWidget {
   const SearchCarsListWidget({super.key});
@@ -18,7 +19,7 @@ class SearchCarsListWidget extends StatelessWidget {
             padding: const EdgeInsets.all(15.0),
             child: Center(
               child: Text(
-                'No Result Found',
+                AppLocalizations.of(context)!.noResultFound,
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color: ColorManager.green,

@@ -2,6 +2,7 @@ import 'package:car_dealership/presentation/resources/assets_manager.dart';
 import 'package:car_dealership/presentation/resources/color_manager.dart';
 import 'package:car_dealership/presentation/resources/routes_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -26,7 +27,7 @@ class SplashScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Find your ideal Car',
+                AppLocalizations.of(context)!.findYourIdealCar,
                 style: TextStyle(
                   color: ColorManager.white,
                   fontWeight: FontWeight.bold,
@@ -37,7 +38,7 @@ class SplashScreen extends StatelessWidget {
                 height: 15,
               ),
               Text(
-                'Get access to the best deals from global cars companies',
+                AppLocalizations.of(context)!.getAccess,
                 style: TextStyle(
                   color: ColorManager.white,
                   fontSize: 16,
@@ -56,7 +57,7 @@ class SplashScreen extends StatelessWidget {
                   style: ElevatedButton.styleFrom(
                       backgroundColor: ColorManager.green),
                   child: Text(
-                    'Get Started',
+                    AppLocalizations.of(context)!.getStarted,
                     style: TextStyle(
                       fontSize: 16,
                       color: ColorManager.black,

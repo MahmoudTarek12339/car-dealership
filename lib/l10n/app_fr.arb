@@ -1,0 +1,22 @@
+{
+  "language": "Française",
+  "findYourIdealCar": "Trouvez votre voiture idéale",
+  "getAccess": "Accédez aux meilleures offres des constructeurs automobiles mondiaux",
+  "getStarted": "Démarrer",
+  "hello": "Bonjour Mahmoud",
+  "findDreamCarHere": "Trouvons la voiture de vos rêves ici",
+  "popularCars": "Voitures Populaires",
+  "oops": "Oops!",
+  "someThingWentWrong": "Quelque chose s’est mal passé,",
+  "pleaseCheckConnection": "Veuillez vérifier votre connexion Internet",
+  "tryAgain": "Réessayez",
+  "noResultFound": "Aucun Résultat Trouvé",
+  "searchYourCar": "Recherchez votre voiture",
+  "description": "Description",
+  "engine": "Moteur",
+  "transmission" : "Transmission",
+  "fuelType" : "Type de Combustible",
+  "totalPrice" : "Prix Total",
+  "available": "Disponible",
+  "bookNow": "Réservez Maintenant"
+}

@@ -1,0 +1,22 @@
+{
+  "language": "Española",
+  "findYourIdealCar": "Encuentra tu Coche ideal",
+  "getAccess": "Accede a las mejores ofertas de compañías automovilísticas globales",
+  "getStarted": "Comenzar",
+  "hello": "Hola Mahmoud",
+  "findDreamCarHere": "encontremos el coche de tus sueños aquí",
+  "popularCars": "Coches Populares",
+  "oops": "Oops!",
+  "someThingWentWrong": "Algo salió mal,",
+  "pleaseCheckConnection": "Por favor, Compruebe Su Conexión a Internet",
+  "tryAgain": "Vuelve a Intentarlo",
+  "noResultFound": "No se ha encontrado ningún resultado",
+  "searchYourCar": "Registra tu coche",
+  "description": "Descripción",
+  "engine": "Motor",
+  "transmission" : "Transmisión",
+  "fuelType" : "Tipo de Combustible",
+  "totalPrice" : "Precio Total",
+  "available": "Disponible",
+  "bookNow": "Reservar Ahora"
+}

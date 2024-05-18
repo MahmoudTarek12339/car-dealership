@@ -1,5 +1,6 @@
 import 'package:car_dealership/presentation/car_details_screen/widgets/car_engine_item.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../../models/car_model.dart';
 
@@ -14,21 +15,21 @@ class CarEngineAndFuelWidget extends StatelessWidget {
       children: [
         Expanded(
           child: CarEngineItem(
-            'Engine',
+            AppLocalizations.of(context)!.engine,
             car.engine,
             Icons.speed,
           ),
         ),
         Expanded(
           child: CarEngineItem(
-            'Transmission',
+            AppLocalizations.of(context)!.transmission,
             car.transmission,
             Icons.rv_hookup,
           ),
         ),
         Expanded(
           child: CarEngineItem(
-            'Fuel Type',
+            AppLocalizations.of(context)!.fuelType,
             car.fuelType,
             Icons.local_gas_station,
           ),

@@ -2,6 +2,8 @@ import 'package:car_dealership/controller/cars_provider.dart';
 import 'package:car_dealership/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 class SearchWidget extends StatelessWidget {
   const SearchWidget({super.key});
@@ -25,7 +27,7 @@ class SearchWidget extends StatelessWidget {
               borderSide: BorderSide.none,
             ),
             prefixIcon: const Icon(Icons.search),
-            hintText: 'Search your car',
+            hintText: AppLocalizations.of(context)!.searchYourCar,
             hintStyle: TextStyle(
               color: ColorManager.lightBlack,
             ),

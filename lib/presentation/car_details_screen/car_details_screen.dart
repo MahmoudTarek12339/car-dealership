@@ -5,6 +5,7 @@ import 'package:car_dealership/presentation/car_details_screen/widgets/price_and
 import 'package:car_dealership/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../models/car_model.dart';
 
@@ -72,7 +73,7 @@ class CarDetailsScreen extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  'Description',
+                  AppLocalizations.of(context)!.description,
                   style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,

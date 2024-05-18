@@ -3,6 +3,7 @@ import 'package:car_dealership/presentation/resources/assets_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../resources/color_manager.dart';
 
@@ -19,7 +20,7 @@ class NoInternetWidget extends StatelessWidget {
             height: 15,
           ),
           Text(
-            'Oops!',
+            AppLocalizations.of(context)!.oops,
             style: TextStyle(
               fontSize: 26,
               fontWeight: FontWeight.bold,
@@ -30,7 +31,7 @@ class NoInternetWidget extends StatelessWidget {
             height: 15,
           ),
           Text(
-            'Something Went Wrong,',
+            AppLocalizations.of(context)!.someThingWentWrong,
             style: TextStyle(
               fontSize: 16,
               color: ColorManager.black,
@@ -40,7 +41,7 @@ class NoInternetWidget extends StatelessWidget {
             height: 5,
           ),
           Text(
-            'Please Check Your Internet Connection',
+            AppLocalizations.of(context)!.pleaseCheckConnection,
             style: TextStyle(
               fontSize: 16,
               color: ColorManager.black,
@@ -56,7 +57,7 @@ class NoInternetWidget extends StatelessWidget {
             style:
                 ElevatedButton.styleFrom(backgroundColor: ColorManager.green),
             child: Text(
-              'Try Again',
+              AppLocalizations.of(context)!.tryAgain,
               style: TextStyle(
                 fontSize: 16,
                 color: ColorManager.black,

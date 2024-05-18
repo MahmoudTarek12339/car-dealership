@@ -1,0 +1,22 @@
+{
+  "language": "العربية",
+  "findYourIdealCar": "اعثر علي سيارة احلامك",
+  "getAccess": "احصل على أفضل الصفقات من شركات السيارات العالمية",
+  "getStarted": "ابدأ الآن",
+  "hello": "مرحبا محمود",
+  "findDreamCarHere": "دعنا نجد سيارة أحلامك هنا",
+  "popularCars": "الأكثر انتشارآ",
+  "oops": "عفوآ!",
+  "someThingWentWrong": "حدث خطأ ما،",
+  "pleaseCheckConnection": "يرجى التحقق من اتصالك بالإنترنت",
+  "tryAgain": "حاول مجددآ",
+  "noResultFound": "لم يتم العثور على نتيجة",
+  "searchYourCar": "ابحث عن سيارتك",
+  "description": "المواصفات",
+  "engine": "المحرك",
+  "transmission" : "ناقل الحركه",
+  "fuelType" : "نوع الوقود",
+  "totalPrice" : "الإجمالي",
+  "available": "متاح",
+  "bookNow": "اطلب الآن"
+}
