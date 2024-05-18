@@ -45,7 +45,6 @@ class CarsProvider with ChangeNotifier {
 
   //retrieve cars data from directus server
   getCars() async {
-    print('getting cars');
     //check internet connectivity
     bool internetConnected = await checkConnection();
     if (!internetConnected) {
@@ -85,14 +84,11 @@ class CarsProvider with ChangeNotifier {
       await Directus(AppConstants.baseUrl).init().then((sdk) {
         //after sdk initialized
         //retrieve data from cars collection
-        print('collectionName $collectionName');
         sdk.items(collectionName).readMany().then((res) {
           List<Car> responses =
               res.data.map((car) => Car.fromJson(car)).toList();
           cars.clear();
           cars.addAll(responses);
-          print('get success');
-          print(cars[0].make);
           notifyListeners();
         }).catchError((error) {
           apiRequestFail = true;
