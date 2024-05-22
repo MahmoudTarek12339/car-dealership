@@ -8,6 +8,7 @@ import 'package:provider/provider.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 import '../../models/car_model.dart';
+import '../resources/routes_manager.dart';
 
 class CarDetailsScreen extends StatelessWidget {
   final int index;
@@ -45,6 +46,15 @@ class CarDetailsScreen extends StatelessWidget {
             ),
           ),
           actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context,Routes.chatRoute);
+              },
+              icon: Icon(
+                Icons.chat,
+                color: ColorManager.black,
+              ),
+            ),
             IconButton(
               onPressed: () {
                 context.read<CarsProvider>().updateFavorite(car.id);

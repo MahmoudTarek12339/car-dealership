@@ -17,6 +17,11 @@
   "transmission" : "Transmisión",
   "fuelType" : "Tipo de Combustible",
   "totalPrice" : "Precio Total",
-  "available": "Disponible",
-  "bookNow": "Reservar Ahora"
+  "available": "Available",
+  "bookNow": "Reservar Ahora",
+  "typeMessage": "Escriba un Mensaje",
+  "getCurrentLocation": "Obtener La Ubicación Actual",
+  "selectLocationManually": "Seleccionar Ubicación Manualmente",
+  "select": "Elegir",
+  "loading": "Carga"
 }

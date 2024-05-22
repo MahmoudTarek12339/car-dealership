@@ -1,11 +1,13 @@
 import 'package:car_dealership/presentation/car_details_screen/car_details_screen.dart';
 import 'package:car_dealership/presentation/home_screen/home_screen.dart';
 import 'package:car_dealership/presentation/splash_screen/splash_screen.dart';
+import 'package:car_dealership/presentation/chat_screen/chat_screen.dart';
 import 'package:flutter/material.dart';
 
 class Routes {
   static const String splashRoute = "/";
   static const String homeRoute = "/home";
+  static const String chatRoute = "/chat";
   static const String carDetails = "/details";
 }
 
@@ -21,6 +23,8 @@ class RouteGenerator {
             settings.arguments as Map<String, dynamic>;
         int index = arguments['index'] as int;
         return MaterialPageRoute(builder: (_) => CarDetailsScreen(index));
+      case Routes.chatRoute:
+        return MaterialPageRoute(builder: (_) => const ChatScreen());
       default:
         return unDefinedRoute();
     }

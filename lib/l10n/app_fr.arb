@@ -18,5 +18,10 @@
   "fuelType" : "Type de Combustible",
   "totalPrice" : "Prix Total",
   "available": "Disponible",
-  "bookNow": "Réservez Maintenant"
+  "bookNow": "Réservez Maintenant",
+  "typeMessage": "Tapez un message",
+  "getCurrentLocation": "Obtenir L’emplacement Actuel",
+  "selectLocationManually": "Sélectionnez L’emplacement Manuellement",
+  "select": "Choisir",
+  "loading": "Chargement"
 }

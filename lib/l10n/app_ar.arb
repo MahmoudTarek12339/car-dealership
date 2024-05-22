@@ -18,5 +18,10 @@
   "fuelType" : "نوع الوقود",
   "totalPrice" : "الإجمالي",
   "available": "متاح",
-  "bookNow": "اطلب الآن"
+  "bookNow": "اطلب الآن",
+  "typeMessage": "اكتب رسالة",
+  "getCurrentLocation": "موقعك الحالي",
+  "selectLocationManually": "اختر موقعك يدويآ",
+  "select": "اختر",
+  "loading": "جاري التحميل"
 }

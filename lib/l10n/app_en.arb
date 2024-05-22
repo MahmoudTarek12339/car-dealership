@@ -21,5 +21,10 @@
   "fuelType" : "Fuel Type",
   "totalPrice" : "Total Price",
   "available": "Available",
-  "bookNow": "Book Now"
+  "bookNow": "Book Now",
+  "typeMessage": "Type a message",
+  "getCurrentLocation": "Get Current Location",
+  "selectLocationManually": "Select Location Manually",
+  "select": "Select",
+  "loading": "Loading"
 }

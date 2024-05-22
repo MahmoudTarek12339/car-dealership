@@ -1,7 +1,9 @@
+import 'package:car_dealership/controller/cars_provider.dart';
 import 'package:car_dealership/models/car_model.dart';
 import 'package:car_dealership/presentation/resources/color_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:provider/provider.dart';
 
 class PriceAndBookWidget extends StatelessWidget {
   final Car car;
@@ -10,6 +12,8 @@ class PriceAndBookWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double priceConversionFactor =
+        context.read<CarsProvider>().priceConvertFactor;
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
@@ -21,7 +25,7 @@ class PriceAndBookWidget extends StatelessWidget {
               height: 5,
             ),
             Text(
-              '${car.price}',
+              '${car.price * priceConversionFactor}',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 18,

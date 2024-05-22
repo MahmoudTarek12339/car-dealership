@@ -1,4 +1,5 @@
 import 'package:car_dealership/controller/cars_provider.dart';
+import 'package:car_dealership/controller/chat_provider.dart';
 import 'package:car_dealership/presentation/resources/routes_manager.dart';
 import 'package:car_dealership/presentation/resources/theme_manager.dart';
 import 'package:flutter/material.dart';
@@ -14,8 +15,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
-        create: (context) => CarsProvider(),
+    return MultiProvider(
+        providers: [
+          ChangeNotifierProvider(
+            create: (context) => CarsProvider(),
+          ),
+          ChangeNotifierProvider(
+            create: (context) => ChatProvider(),
+          ),
+        ],
         builder: (context, _) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
