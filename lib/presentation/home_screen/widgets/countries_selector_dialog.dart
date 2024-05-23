@@ -58,7 +58,6 @@ class _CountriesSelectorDialogState extends State<CountriesSelectorDialog> {
                 //remove country flag
                 var list = value.split(' ');
                 list.removeAt(0);
-                print(list);
                 selectedCountry = list.join(' ').trim();
                 setState(() {});
               },
@@ -88,6 +87,7 @@ class _CountriesSelectorDialogState extends State<CountriesSelectorDialog> {
                         selectedCountry ?? '',
                         selectedCity ?? '',
                       );
+                      //close loading dialog and then
                       //close country selector dialog
                       Navigator.of(context).pop();
                       Navigator.of(context).pop();

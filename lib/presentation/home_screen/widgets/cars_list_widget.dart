@@ -29,7 +29,11 @@ class CarsListWidget extends StatelessWidget {
         );
       } else if (value.apiRequestFail) {
         // if request failed or internet connection failure
-        return const NoInternetWidget();
+        return SliverToBoxAdapter(
+          child: NoInternetWidget(onPressed: () {
+            context.read<CarsProvider>().getCars();
+          }),
+        );
       } else {
         // if request successfully get data
         return SliverList.builder(

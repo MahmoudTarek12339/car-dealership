@@ -1,20 +1,13 @@
 import 'package:car_dealership/controller/chat_provider.dart';
-import 'package:car_dealership/presentation/chat_screen/widgets/message_item_widget.dart';
+import 'package:car_dealership/presentation/chat_screen/widgets/messages_list_widget.dart';
+import 'package:car_dealership/presentation/chat_screen/widgets/send_message_widget.dart';
+import 'package:car_dealership/presentation/home_screen/widgets/no_internet_widget.dart';
 import 'package:car_dealership/presentation/resources/color_manager.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class ChatScreen extends StatefulWidget {
+class ChatScreen extends StatelessWidget {
   const ChatScreen({super.key});
-
-  @override
-  State<ChatScreen> createState() => _ChatScreenState();
-}
-
-class _ChatScreenState extends State<ChatScreen> {
-  final TextEditingController controller = TextEditingController();
-  final ScrollController _scrollController = ScrollController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,8 +15,16 @@ class _ChatScreenState extends State<ChatScreen> {
       child: Scaffold(
         body: Consumer<ChatProvider>(
           builder: (_, value, __) {
+            //show network error widget if no internet connection
+            if (value.networkError) {
+              return Center(
+                child: NoInternetWidget(onPressed: () {
+                  value.initApi();
+                }),
+              );
+            }
             //show loading screen while fetching messages
-            if (value.isMessagesLoading) {
+            else if (value.isMessagesLoading) {
               return Center(
                 child: CircularProgressIndicator(
                   color: ColorManager.green,
@@ -32,73 +33,15 @@ class _ChatScreenState extends State<ChatScreen> {
             }
             return Column(
               children: [
-                Expanded(
-                  child: ListView.builder(
-                    controller: _scrollController,
-                    itemCount: value.messages.length,
-                    physics: const BouncingScrollPhysics(),
-                    itemBuilder: (context, index) {
-                      final message = value.messages[index];
-                      return MessageItem(message: message);
-                    },
-                  ),
+                MessagesListWidget(
+                  messages: value.messages,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(
-                    children: [
-                      Expanded(
-                        child: TextField(
-                          controller: controller,
-                          onChanged: (m) {
-                            value.update();
-                          },
-                          decoration:
-                              InputDecoration(hintText: AppLocalizations.of(context)!.typeMessage),
-                        ),
-                      ),
-                      IconButton(
-                        icon: const Icon(Icons.send),
-                        //deactivate send button if form field is empty
-                        onPressed: controller.text.isNotEmpty
-                            ? () {
-                                context
-                                    .read<ChatProvider>()
-                                    .sendMessage(controller.text);
-                                controller.clear();
-                                FocusScope.of(context).unfocus();
-                                value.scrollToBottom();
-                              }
-                            : null,
-                      ),
-                    ],
-                  ),
-                ),
+                const SendMessageWidget(),
               ],
             );
           },
         ),
       ),
     );
-  }
-
-  @override
-  void initState() {
-    super.initState();
-    //this line to make screen automatically scroll to last message
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      final provider = Provider.of<ChatProvider>(context, listen: false);
-      provider.scrollController = _scrollController;
-      if (!provider.isMessagesLoading&&provider.messages.isNotEmpty) {
-        provider.scrollToBottom();
-      }
-    });
-  }
-
-  @override
-  void dispose() {
-    controller.dispose();
-    _scrollController.dispose();
-    super.dispose();
   }
 }
