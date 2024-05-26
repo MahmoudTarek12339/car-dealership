@@ -1,6 +1,7 @@
 import 'package:car_dealership/presentation/home_screen/widgets/car_image_widget.dart';
 import 'package:car_dealership/presentation/home_screen/widgets/favorite_widget.dart';
 import 'package:car_dealership/presentation/resources/color_manager.dart';
+import 'package:car_dealership/presentation/resources/constants.dart';
 import 'package:flutter/material.dart';
 
 import '../../../models/car_model.dart';
@@ -15,6 +16,7 @@ class CarsListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final width = MediaQuery.of(context).size.width;
     return Padding(
       padding: const EdgeInsets.only(bottom: 5.0),
       child: InkWell(
@@ -23,8 +25,9 @@ class CarsListItem extends StatelessWidget {
           Navigator.pushNamed(context, Routes.carDetails,
               arguments: {'index': index});
         },
-        child: SizedBox(
-          height: 200,
+        child: AspectRatio(
+          //here to make car item responsive between mobile and tablet
+          aspectRatio: width < AppConstants.kTabletBreakPoint ? 1.5 : 1.75,
           child: Card(
             elevation: 10,
             color: ColorManager.white,
