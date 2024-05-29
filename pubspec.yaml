@@ -50,6 +50,14 @@ dependencies:
   csc_picker: ^0.2.7
   web_socket_channel: ^3.0.0
   country_data: ^0.0.2
+  flutter_launcher_icons: ^0.13.1
+
+flutter_icons:
+  android:  true
+  ios: true
+  image_path: "assets/icon/icon.png"
+  adaptive_icon_background: "assets/icon/logo_background.png"
+  adaptive_icon_foreground: "assets/icon/logo_foreground.png"
 
 dev_dependencies:
   flutter_test:
